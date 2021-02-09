@@ -6,7 +6,7 @@ import { ReviewsService } from 'src/app/services/reviews.service';
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.css'],
+  styleUrls: ['./reviews.component.scss'],
   providers: [ReviewsService]
 })
 

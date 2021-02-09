@@ -5,17 +5,21 @@ import { AppComponent } from './app.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ReviewComponent } from './components/review/review.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StarsComponent } from './shared/stars/stars.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReviewsComponent,
-    ReviewComponent
+    ReviewComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
