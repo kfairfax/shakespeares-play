@@ -1,4 +1,14 @@
-<div *ngIf="reviewDetail">
-    <p>{{reviewDetail.id}}</p>
-    <p>{{reviewDetail.body}}</p>
+<div class="reviews-container" *ngIf="reviewDetail">
+    <div class="review">
+        <div class="author-star">
+            <h4 class="author">{{ reviewDetail.author }}</h4>
+            <span>({{reviewDetail.rating}})</span> 
+            <span class="star">
+                <app-stars [rating]='reviewDetail.rating'></app-stars>
+            </span> 
+        </div>  
+        <p>{{reviewDetail.publish_date}}</p>
+        <p>{{reviewDetail.body}}</p>
+    </div>
 </div>
+

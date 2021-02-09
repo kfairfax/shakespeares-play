@@ -1,14 +1,19 @@
 <div class="reviews-container"> 
     <div class="review" *ngFor="let review of reviews" (click)="onReviewClick(review.id)">
-        <p>
-            <app-stars [rating]='review.rating'></app-stars>
-        </p> 
-        <p>{{review.rating}}</p>
-        <p>{{ review.publish_date }}</p>
-        <p>{{ review.id }}</p>
-        <p>{{ review.body }}</p>
-        <p>{{ review.author }}</p>
+        <div class="author-star">
+            <h4 class="author">{{ review.author }}</h4>
+            <span class="star">
+                <app-stars [rating]='review.rating'></app-stars>
+            </span> 
+        </div>  
+            <!-- <p>{{review.rating}}</p>
+            <p>{{ review.publish_date }}</p>
+            <p>{{ review.id }}</p> -->
+            <p class="body">{{ review.body }}</p>
+       
     </div>
 </div>
+
+
 
 
