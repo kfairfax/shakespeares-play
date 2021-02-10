@@ -19,6 +19,7 @@ export class ReviewComponent implements OnInit {
       this.route.paramMap
         .subscribe(params => {
           this.id = parseInt(params.get("id"));
+          
           this.reviewService.getReview(this.id).subscribe((result: Review) => {
             this.reviewDetail = result;
           })

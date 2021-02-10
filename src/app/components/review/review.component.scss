@@ -1,0 +1,29 @@
+.reviews-container{
+    margin: auto;
+    width: 552px;
+    
+    .review {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); //creates "card" effect
+        transition: 0.3s;
+        border-radius: 5px; //rounds corners
+        padding: 8px 16px 8px 16px; //padding inside the review card
+        margin: 16px;
+        background-color: #FFFFFF;
+
+        .author {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .star {
+            color: #FFC4C4;
+            display: inline-block;
+            vertical-align: text-bottom;
+        }
+        
+        hr {
+            border:#FFC4C4 1px solid;
+            width: 485px;
+        }
+    }
+}
