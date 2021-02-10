@@ -5,18 +5,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ReviewsService {
   constructor(private http: HttpClient) { }
 
-  getReviews(){
+  getReviews() {
     const url = "https://shakespeare.podium.com/api/reviews";
 
     const customHeader = {
       'X-Api-Key': 'H3TM28wjL8R4#HTnqk?c'
     }
-  
-    const requestOptions = {                                                                                                                                                                                 
+
+    const requestOptions = {
       headers: new HttpHeaders(customHeader),
       'Content-Type': 'application/json'
     };
-    
+
     return this.http.get(url, requestOptions);
   }
 }

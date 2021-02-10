@@ -1,11 +1,24 @@
 <div class="reviews-container" *ngIf="reviewDetail">
-    <div class="review">
-        <h4 class="author">{{ reviewDetail.author }}</h4>
-        <span class="star">
-            <app-stars [rating]='reviewDetail.rating'></app-stars>
-        </span>
-        <hr>
-        <p>{{ reviewDetail.publish_date | date :'longDate' }}</p>
-        <p>{{ reviewDetail.body }}</p>
+    <div class="review-boxes">
+        <div class="back-nav-box">
+            <div (click)="navigateToReviews()">
+                <span class="back-nav material-icons">
+                    arrow_back
+                </span>
+                <span class="back-text">
+                    <span class="back-text1">See All Reviews</span>
+                    <span class="back-text2">Shakespeare's Play</span>
+                </span>
+            </div>
+        </div>
+        <div class="review">
+            <h4 class="author">{{ reviewDetail.author }}</h4>
+            <span class="star">
+                <app-stars [rating]='reviewDetail.rating'></app-stars>
+            </span>
+            <hr>
+            <p>{{ reviewDetail.publish_date | date :'longDate' }}</p>
+            <p>{{ reviewDetail.body }}</p>
+        </div>
     </div>
 </div>
